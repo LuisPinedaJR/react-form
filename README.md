@@ -6,12 +6,10 @@
 - useRef and useState.
 - Both hooks were used to demostrate how both would work.
 
-
 ## How to navigate this project
 
 - There is only one CSS file index.css
 - This is a basic form which has two components exported to App.js, which is main file.
-
 
 ## Why I built the project this way
 
