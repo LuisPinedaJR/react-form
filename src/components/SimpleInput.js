@@ -2,6 +2,7 @@ import React from 'react'
 import useInput from '../hooks/use-input'
 
 const SimpleInput = props => {
+
   const {
     value: enteredName,
     isValid: enteredNameIsValid,
@@ -35,9 +36,11 @@ const SimpleInput = props => {
     }
     console.log(enteredName)
     //name reset
+
     resetNameInput()
     // email reset
     resetEmailInput()
+
   }
 
   const nameInputClasses = nameInputHasError
@@ -45,6 +48,10 @@ const SimpleInput = props => {
     : 'form-control'
 
   const emailInputClasses = emailInputHasError
+    ? 'form-control invalid'
+    : 'form-control'
+
+  const emailInputClasses = enteredEmailIsInvalid
     ? 'form-control invalid'
     : 'form-control'
 
@@ -68,6 +75,7 @@ const SimpleInput = props => {
         <input
           type="email"
           id="email"
+
           onBlur={emailBlurHandler}
           onChange={emailChangeHandler}
           value={enteredEmail}
